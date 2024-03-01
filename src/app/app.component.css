@@ -6,6 +6,7 @@ body {
   
   .main {
     max-width: 500px;
+    border-radius: 10px;
     width: 85%;
     margin: 2rem auto;
     padding: 1rem;
@@ -31,10 +32,11 @@ body {
   .lg-text-input {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #000;
+    border: 2px solid #afafaf;
     display: block;
     box-sizing: border-box;
     font-size: 1rem;
+    border-radius: 10px;
   }
   
   .btn-wrapper {
@@ -43,10 +45,11 @@ body {
   
   .btn-menu {
     flex-basis: 32%;
+    border-radius: 20px;
   }
   
   .active {
-    color: green;
+    color: rgb(70, 164, 241);
   }
   
   ul {

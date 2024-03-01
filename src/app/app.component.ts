@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {NgFor} from "@angular/common";
+import { ItemComponent } from './item/item.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ItemComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -15,10 +16,10 @@ export class AppComponent {
   filter: 'all' | 'active' | 'done' = 'all';
 
   allItems = [
-    { description: 'eat', done: true },
-    { description: 'sleep', done: false },
-    { description: 'play', done: false },
-    { description: 'laugh', done: false },
+    { description: 'покушать', done: true },
+    { description: 'поспать', done: false },
+    { description: 'поиграть', done: false },
+    { description: 'поработать', done: false },
   ];
 
   get items() {
@@ -33,5 +34,9 @@ export class AppComponent {
       description,
       done: false
     });
+  }
+
+  remove(item: any) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
   }
 }
