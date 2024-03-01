@@ -36,9 +36,9 @@
   </div>
 
   <h2>
-    Всего дел: {{items.length}}
-    <span *ngIf="items.length === 1; else elseBlock">item</span>
-    <ng-template #elseBlock>items</ng-template>
+    {{items.length}}
+    <span *ngIf="items.length === 1; else elseBlock">дело</span>
+    <ng-template #elseBlock>дел</ng-template>
   </h2>
   
   <ul>
